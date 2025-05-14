@@ -1,0 +1,35 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap');
+:root {
+  --primary-color: #C41E3A;
+  --accent-color: #4A90E2;
+  --light-bg: #fff;
+  --light-text: #333;
+  --dark-bg: #1a1a1a;
+  --dark-text: #f4f4f4;
+}
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s, color 0.3s;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+.btn-primary {
+  @apply bg-[#C41E3A] text-white px-4 py-2 rounded-md font-medium transition-all hover:bg-opacity-90;
+}
+.btn-secondary {
+  @apply border border-[#C41E3A] text-[#C41E3A] px-4 py-2 rounded-md font-medium transition-all hover:bg-[#C41E3A] hover:bg-opacity-10;
+}
+.dark .btn-secondary {
+  @apply border-[#C41E3A] text-[#f4f4f4];
+}
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
